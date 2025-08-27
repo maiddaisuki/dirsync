@@ -1569,7 +1569,7 @@ namespace eval Fs {
         Msg::Note "creating directory $destdir"
       }
 
-      if ![Options::Get verbose] {
+      if ![Options::Get dry] {
         try {
           file mkdir $destdir
         } on error {msg} {
